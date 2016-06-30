@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Practice3_clicker.unity
+  isLoaded: 1
+  isActive: 1

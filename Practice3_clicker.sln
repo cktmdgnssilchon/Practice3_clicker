@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice3_clicker.CSharp", "Practice3_clicker.CSharp.csproj", "{0AA5D45B-5C5D-FFA3-E1D8-2C37BEEDAF6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice3_clicker.CSharp.Editor", "Practice3_clicker.CSharp.Editor.csproj", "{F64F58AE-B583-AE57-3517-E1A01C360ADD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AA5D45B-5C5D-FFA3-E1D8-2C37BEEDAF6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AA5D45B-5C5D-FFA3-E1D8-2C37BEEDAF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AA5D45B-5C5D-FFA3-E1D8-2C37BEEDAF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AA5D45B-5C5D-FFA3-E1D8-2C37BEEDAF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F64F58AE-B583-AE57-3517-E1A01C360ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64F58AE-B583-AE57-3517-E1A01C360ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F64F58AE-B583-AE57-3517-E1A01C360ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F64F58AE-B583-AE57-3517-E1A01C360ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
