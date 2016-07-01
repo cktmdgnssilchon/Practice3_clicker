@@ -12,15 +12,20 @@ public static class Util
             noRemoveManager = new GameObject("NoRemoveManager");
             MonoBehaviour.DontDestroyOnLoad(noRemoveManager);
         }
-
+ 
         if (null == noRemoveManager.GetComponent<FFMonoBehaviourManager>())
         {
             noRemoveManager.AddComponent<FFMonoBehaviourManager>();
         }
-
+ 
         if (null == noRemoveManager.GetComponent<ResourceManager>())
         {
             noRemoveManager.AddComponent<ResourceManager>();
+        }
+ 
+        if (null == noRemoveManager.GetComponent<SoundManager>())
+        {
+            noRemoveManager.AddComponent<SoundManager>();
         }
     }
 

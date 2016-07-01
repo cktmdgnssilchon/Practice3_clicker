@@ -13,12 +13,22 @@ public class IdleState : CharacterStateMachine
     {
     }
 
+    //대기
+    //public override void UpdateFrame()
+    //{
+    //    if (m_owner.IsEndAnimation())
+    //    {
+    //        m_owner.SetState(UnitStateIndex.Idle);
+    //    }
+    //}
+
+    //알아서 공격
     public override void UpdateFrame()
     {
-
-        if (m_owner.IsEndAnimation())
-        {
-            m_owner.SetState(UnitStateIndex.Idle);
-        }
+        m_currTime += Time.deltaTime;
+        if (m_currTime < m_owner.attackSpeed)
+            return;
+ 
+        m_owner.SetState(UnitStateIndex.Attack);       
     }
 }

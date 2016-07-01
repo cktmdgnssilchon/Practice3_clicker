@@ -102,6 +102,14 @@ public class Character : FFMonoBehaviour
         GameScene.Instance.AttackEvent(m_attack);
     }
 
+    public float attackSpeed
+    {
+        get { return m_attackSpeed; }
+        set { m_attackSpeed = value; }
+    }
+
+    float m_attackSpeed = 1; //공격속도
+
     int m_attack = 10; //캐릭터의 공격력
 
     Transform m_myTransform;

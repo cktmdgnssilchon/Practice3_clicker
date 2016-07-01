@@ -14,3 +14,12 @@ public enum UnitStateIndex
     Dead,
     Max,
 }
+
+public enum BattleStateIndex
+{
+    None,
+    BattleReady,
+    Battle,
+    BattleResult,
+    Max,
+}
