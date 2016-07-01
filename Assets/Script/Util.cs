@@ -27,6 +27,11 @@ public static class Util
         {
             noRemoveManager.AddComponent<SoundManager>();
         }
+
+        if (null == noRemoveManager.GetComponent<GameInfo>())
+        {
+            noRemoveManager.AddComponent<GameInfo>();
+        }
     }
 
     static public void CreateInstanceToString<T>(ref T instance, string classMame)
@@ -36,5 +41,27 @@ public static class Util
         if (instance == null)
             Debug.Log(string.Format("{0} Class not Found!", classMame));
     }
+
+    public static void AddDamageLabelEffect(int value, Transform ownerTransfrom)
+    {
+        GameObject assetObject = ResourceManager.Instance.ClonePrefab("DamageLabel");
+        DamageLabelEffect effect = assetObject.GetComponent<DamageLabelEffect>();
+        effect.SetEffect(ownerTransfrom, value);
+    }
+
+    static public UIRoot GetUiRoot()
+    {
+        UIRoot root = null;
+        for (int i = 0; i < UIRoot.list.Count; ++i)
+        {
+            if (UIRoot.list[i].name == "UI Root (2D)")
+            {
+                root = UIRoot.list[i];
+                break;
+            }
+        }
+        return root;
+    }
+
 }
 

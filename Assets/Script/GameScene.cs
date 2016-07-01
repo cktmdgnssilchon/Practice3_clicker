@@ -101,6 +101,8 @@ public class GameScene : FFMonoBehaviour
     public Character m_character;
     public Enemy m_enemy;
     public UISlider m_hpBar;
+    public UILabel m_hpLabel;
+    public UILabel m_stageLabel;
 
     BattleStateMachineManager m_battleStateManager;
 

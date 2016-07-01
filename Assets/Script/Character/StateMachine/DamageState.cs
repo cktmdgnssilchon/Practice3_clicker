@@ -17,7 +17,8 @@ public class DamageState : CharacterStateMachine
     {
         if (m_owner.IsEndAnimation())
         {
-            m_owner.SetState(UnitStateIndex.Dead);
+            //m_owner.SetState(UnitStateIndex.Dead);
+            m_owner.SetState(UnitStateIndex.Attack);
         }
     }
 }
