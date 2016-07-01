@@ -1,42 +1,55 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+ 
 public class Enemy : FFMonoBehaviour
 {
     public override void Awake()
     {
         base.Awake();
         m_myTransform = transform;
+ 
+        m_maxHp = 100;
+        m_currHp = 100;
     }
-
+ 
     public override void OnDestroy()
     {
         base.OnDestroy();
     }
-
+ 
     public void SetDamage(int damage)
     {
-        if (m_hp <= 0)
+        if (m_currHp <= 0)
         {
             return;
         }
-
-        m_hp -= damage;
-        Debug.Log(string.Format("{0}의 데미지를 입었습니다. 남은 HP {1}", damage, m_hp));
+ 
+        m_currHp -= damage;
+ 
+        m_hpBar.sliderValue = (float)m_currHp / (float)m_maxHp;
     }
-
+ 
     public Transform myTransform
     {
         get { return m_myTransform; }
     }
-
-    public int hp
+ 
+    public int currHp
     {
-        get { return m_hp; }
-        set { m_hp = value; }
+        get { return m_currHp; }
+        set { m_currHp = value; }
     }
-
+ 
+    public int maxHp
+    {
+        get { return m_maxHp; }
+        set { m_maxHp = value; }
+    }
+ 
     public GameObject m_model;
+    public UISlider m_hpBar;
     Transform m_myTransform;
-    int m_hp = 100;
+    int m_currHp = 100;
+    int m_maxHp = 100;
+    
 }
